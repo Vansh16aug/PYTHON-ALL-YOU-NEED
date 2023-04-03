@@ -1,0 +1,263 @@
+n=int(input("Enter a number :"))
+for i in range(1,n+1):
+    if i**2<=n:
+        print(i**2)     
+                                      
+
+
+
+#add key value to dict
+d={1:10,2:20}
+d.update({3:30})
+print(d)
+
+#palindrome or not using recurssion
+def palindrome(n):
+    return n==n[::-1]
+n=input("Enter a string :")
+print(palindrome(n))
+
+
+#palindrome or not
+n=input("Enter a string :")
+if n==n[::-1]:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+#find larger string without using inbuilt functions
+n=input("Enter a string :")
+m=input("Enter a string :")
+if len(n)>len(m):
+    print(n)
+else:
+    print(m)
+
+#common characters in a string
+n=input("Enter a string :")
+m=input("Enter a string :")
+l=[]
+for i in n:
+    if i in m:
+        l.append(i)
+print(l)
+
+
+#reverse string
+n=input("Enter a string :")
+print(n[::-1])
+
+# replace blank space with hyphen
+n=input("Enter a string :")
+print(n.replace(" ","-"))
+
+# replace A with $ in a string
+n=input("Enter a string :")
+print(n.replace('A','$'))
+
+#remove nth index character from string
+n=input("Enter a string :")
+n1=int(input("Enter a number :"))
+print(n[:n1]+n[n1+1:])
+
+
+#removve odd indexed
+n=input("Enter :")
+l=[]
+for i in range(len(n)):
+    if i%2==0:
+        l.append(n[i])
+print(''.join(l))
+
+#factorial without using recursion
+def fact(n):
+    fact=1
+    for i in range(1,n+1):
+        fact=fact*i
+    return fact
+n=int(input("Enter a number :"))
+print(fact(n))
+
+#factorial using recursion
+def fact(n):
+    if n==1:
+        return 1
+    else:
+        return n*fact(n-1)
+n=int(input("Enter a number :"))
+print(fact(n))
+
+# fibonacci without using recursion
+n=int(input("Enter a number :"))
+a=0
+b=1
+print(a)
+print(b)
+for i in range(2,n):
+    c=a+b
+    a=b
+    b=c
+    print(c)
+
+
+# fibonacci using recursion
+def fib(n):
+    if n==1 or n==2:
+        return 1
+    else:
+        return fib(n-1)+fib(n-2)
+n=int(input("Enter a number :"))
+for i in range(1,n+1):
+    print(fib(i))
+
+
+# all possible combinations of 3 digits 
+n=int(input("Enter a number :"))
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        for k in range(1,n+1):
+            print(i,j,k)
+            
+
+#  perfect square or not in a given range
+n=int(input("Enter a number :"))
+for i in range(1,n+1):
+    if i**2<=n:
+        print(i**2)     
+                                      
+
+
+
+n=int(input("Enter :"))
+m=int(input("Enter :"))
+def product(n,m):               
+    if m==1:
+        return n
+    else:
+        return n+product(n,m-1)
+print(product(n,m))                                             
+
+
+#if number is powewr of 2 or not
+n=int(input("Enter a number :"))
+if n&(n-1)==0:
+    print("Power of 2")
+else:
+    print("Not a power of 2")
+
+# if 2 numbers are ambical number or not
+x=int(input('Enter number 1: '))
+y=int(input('Enter number 2: '))
+sum1=0
+sum2=0
+for i in range(1,x):
+    if x%i==0:
+        sum1+=i
+for j in range(1,y):
+    if y%j==0:
+        sum2+=j
+if(sum1==y and sum2==x):
+    print('Amicable!')
+else:
+    print('Not Amicable!')
+
+# print range using lambda
+n=int(input("Enter a number :"))
+a=lambda n:range(1,n+1)
+print(list(a(n)))
+
+#strong number
+n=int(input("Enter a number :"))
+sum=0
+for i in str(n):
+    fact=1
+    for j in range(1,int(i)+1):
+        fact=fact*j
+    sum=sum+fact
+if sum==n:
+    print("Strong number")
+else:
+    print("Not a strong number")
+
+#  read input n and give - n+ nn+ nnn
+n=int(input("Enter a number :"))
+a=0
+for i in range(0,3):
+    a+=n*(n**i)
+print(a)
+
+#table of number
+n=int(input("Enter a number :"))
+for i in range(1,11):
+    print(n,"x",i,"=",i*n)
+
+
+#sum of digit of number
+n=int(input("Enter a number :"))
+sum=0
+for i in str(n):
+    sum=sum+int(i)
+print(sum)
+
+#divisible by either 2 or 3
+a=int(input("Enter number of times input req :"))
+list=[]
+list2=[]
+for i in range (1,a+1):
+    b=int(input("Enter integers :"))
+    list.append(i)
+print(list)
+for j in range(list[0],list[-1]):
+    if j%2!=0 and j%3!=0:
+        list2.append(j)
+print("No divisible by either 2 or 3 :",list2)
+
+#reverse a number
+
+# b=(input("Enter a number :"))
+# a=b[::-1]
+# print(a)
+
+
+b=int(input("Enter a number :"))
+a=0
+while b>0:
+    a=a*10+b%10
+    b=b//10
+print(a)
+
+#Palindrome or not
+
+def pal(a):
+    if a==a[::-1]:
+        print("Palindrome")
+    else:
+        print("Not a Palindrome")
+b=(input("Enter smth :"))
+pal(b)
+
+#Number is positive or negative
+def pos_neg(num):
+    if n==0:
+        print("neither positive or negative")
+    elif n>0:
+        print("positive")
+    else:
+        print("negative")
+num=int(input("Enter a number :"))
+pos_neg(num)
+
+
+# Even or odd
+def odd_even(n):
+    if n==0:
+        return True
+    elif n==1:
+        return False
+    else:
+        return odd_even(n-2)
+n=int(input("Enter a number :"))
+if odd_even(n):
+    print(n,"is even")
+else:
+    print(n,"is odd")
